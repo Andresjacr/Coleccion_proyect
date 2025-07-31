@@ -1,8 +1,12 @@
 import os 
 from Anadir import anadir_elemento
+from tablas_contenido import contenido 
+from modif import buscar
+from utils.screencontrollers import clear_screen, pause_screen
 
 def menu_principal():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    clear_screen()
+    print("="*30)
     print("Menu Principal")
     print("="*30) 
     print("1. añadir un nuevo elemento")
@@ -22,9 +26,9 @@ def main():
         if opcion == '1':
             anadir_elemento.menu_anadir()
         elif opcion == '2':
-            print("Ver elementos existentes")
+            contenido.menu_ver()  
         elif opcion == '3':
-            print("Buscar un elemento")
+            buscar.menu_buscar()
         elif opcion == '5':
             print("Eliminar un elemento")
         elif opcion == '6':

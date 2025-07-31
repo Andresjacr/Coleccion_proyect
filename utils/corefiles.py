@@ -28,9 +28,6 @@ def read_data(filename: str) -> dict:
         return {}
 
 def write_data(filename: str, data: dict):
-    """
-    Escribe datos en un archivo JSON.
-    """
     check_file(filename)
     filepath = os.path.join(BASE_PATH, filename)
     try:

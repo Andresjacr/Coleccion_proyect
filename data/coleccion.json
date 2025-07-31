@@ -1,0 +1,26 @@
+{
+    "peliculas": [
+        {
+            "titulo": "it",
+            "director": "frederik",
+            "genero": "terror",
+            "valoracion": "5"
+        }
+    ],
+    "libros": [
+        {
+            "titulo": "100 a\u00f1os de soledad",
+            "autor": "gabriengarcia marqes",
+            "genero": "historia",
+            "valoracion": "5"
+        }
+    ],
+    "musica": [
+        {
+            "titulo": "one only",
+            "artista": "oliber tree",
+            "genero": "pop",
+            "valoracion": "10"
+        }
+    ]
+}
