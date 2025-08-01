@@ -4,6 +4,7 @@ from tablas_contenido import contenido
 from modif import buscar
 from modif import eliminar 
 from modif import colecciones
+from modif import editar
 from utils.screencontrollers import clear_screen, pause_screen
 
 def menu_principal():
@@ -14,6 +15,7 @@ def menu_principal():
     print("1. añadir un nuevo elemento")
     print("2. ver elementos existentes")
     print("3. buscar un elemento")
+    print("4. editar elementos")
     print("5. eliminar un elemento")
     print("6. ver elementos por categoria")
     print("7. guardar y cargar coleccion ")
@@ -31,10 +33,12 @@ def main():
             contenido.menu_ver()  
         elif opcion == '3':
             buscar.menu_buscar()
+        elif opcion == '4':
+            editar.menu_editar
         elif opcion == '5':
             eliminar.menu_eliminar() 
         elif opcion == '6':
-            pass 
+            pass
         elif opcion == '7':
             colecciones.menu_coleccion()
         elif opcion == '8':
