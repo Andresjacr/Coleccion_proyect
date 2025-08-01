@@ -34,7 +34,7 @@ def main():
         elif opcion == '3':
             buscar.menu_buscar()
         elif opcion == '4':
-            editar.menu_editar
+            editar.menu_editar()
         elif opcion == '5':
             eliminar.menu_eliminar() 
         elif opcion == '6':
