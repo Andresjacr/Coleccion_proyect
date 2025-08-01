@@ -1,7 +1,8 @@
 from utils.corefiles import read_data, write_data
 from utils.validatedata import validate_string 
 from utils.screencontrollers import clear_screen, pause_screen
-import tabulate as tabulate
+from utils. id import generate_id 
+from tabulate import tabulate
 import main_menu as main_menu 
 FILENAME = 'coleccion.json'
 
@@ -15,7 +16,8 @@ def menu_buscar():
     print("1. buscar por titulo")
     print("2. buscar por autor/artista/director")
     print("3. buscar por genero")
-    print("4. Regresar al menú principal")
+    print("4. buscar por identificador unico")
+    print("5. Regresar al menú principal")
     print("="*30)
 
     opcion = input("Seleccione una opción: ")
@@ -38,6 +40,12 @@ def menu_buscar():
                     buscar_genero(data.get("musica", []), genero)
         mostrar_resultados(resultados, genero)
     elif opcion == '4':
+        identificador = validate_string("Ingrese el identificador único a buscar: ")
+        resultados = buscar_identificador(data.get("peliculas", []), identificador) + \
+                    buscar_identificador(data.get("libros", []), identificador) + \
+                    buscar_identificador(data.get("musica", []), identificador)
+        mostrar_resultados(resultados, identificador)
+    elif opcion == '5':
         print("Regresando al menú principal...")
         main_menu.menu_principal()
     else:
@@ -59,4 +67,5 @@ def buscar_autor(lista, autor):
     return [item for item in lista if item.get("autor", "").lower() == autor.lower() or 
             item.get("artista", "").lower() == autor.lower() or 
             item.get("director", "").lower() == autor.lower()]
-   
+def buscar_identificador(lista, identificador):
+    return [item for item in lista if item.get("identificador", "").lower() == identificador.lower()]

@@ -1,7 +1,9 @@
-import os 
+import sys 
 from Anadir import anadir_elemento
 from tablas_contenido import contenido 
 from modif import buscar
+from modif import eliminar 
+from modif import colecciones
 from utils.screencontrollers import clear_screen, pause_screen
 
 def menu_principal():
@@ -30,13 +32,14 @@ def main():
         elif opcion == '3':
             buscar.menu_buscar()
         elif opcion == '5':
-            print("Eliminar un elemento")
+            eliminar.menu_eliminar() 
         elif opcion == '6':
-            print("Ver elementos por categoría")
+            pass 
         elif opcion == '7':
-            print("Guardar y cargar colección")
+            colecciones.menu_coleccion()
         elif opcion == '8':
             print("Saliendo del programa...")
+            sys.exit()
             break
         else:
             print("Opción no válida, intente de nuevo.")

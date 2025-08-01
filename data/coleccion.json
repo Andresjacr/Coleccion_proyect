@@ -1,18 +1,18 @@
 {
-    "peliculas": [
-        {
-            "titulo": "it",
-            "director": "frederik",
-            "genero": "terror",
-            "valoracion": "5"
-        }
-    ],
+    "peliculas": [],
     "libros": [
         {
             "titulo": "100 a\u00f1os de soledad",
             "autor": "gabriengarcia marqes",
             "genero": "historia",
             "valoracion": "5"
+        },
+        {
+            "titulo": "bibkia",
+            "autor": "Dios",
+            "genero": "historia",
+            "valoracion": "5",
+            "id": "musica0001"
         }
     ],
     "musica": [
