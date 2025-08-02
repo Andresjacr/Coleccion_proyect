@@ -5,6 +5,7 @@ from modif import buscar
 from modif import eliminar 
 from modif import colecciones
 from modif import editar
+from tablas_contenido import categorias
 from utils.screencontrollers import clear_screen, pause_screen
 
 def menu_principal():
@@ -38,7 +39,7 @@ def main():
         elif opcion == '5':
             eliminar.menu_eliminar() 
         elif opcion == '6':
-            pass
+            categorias.menu_categorias()
         elif opcion == '7':
             colecciones.menu_coleccion()
         elif opcion == '8':
